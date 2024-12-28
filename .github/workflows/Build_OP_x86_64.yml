@@ -40,10 +40,10 @@ jobs:
         sudo -E apt-get clean
         
     - name: Move Build Directory
-        run: |
-          mkdir -p /tmp/openwrt
-          rsync -a --delete ./ /tmp/openwrt/
-          cd /tmp/openwrt
+      run: |
+        mkdir -p /tmp/openwrt
+        rsync -a --delete ./ /tmp/openwrt/
+        cd /tmp/openwrt
           
     - name: Clone source code
       env: 
